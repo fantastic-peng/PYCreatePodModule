@@ -3,6 +3,18 @@
 该工程存放了ZEDCreatePodModule.sh的脚本文件，用于快速创建组件化时的模板工程，以达到简化组件化的操作，该脚本文件仅针对公有pod,如果有需要弄自己的私有pod可以，可以拿过去改动一下。
 
 ## 使用时说明
+### 准备
+如果是第一次trunk podSpec到Cocopods 
+1.注册一个账户
+```
+pod trunk register 邮箱地址 '用户名' —verbose  
+```
+2.在浏览器中点击链接确认即注册成功, 成功之后可以终端执行:
+3.查看自己的注册信息, 以后当你有了自己的开源Pod库, 也可以用此方式随时查看自己发布过的Pods;
+```
+pod trunk me
+```
+
 ### 使用步骤一：
 首先在Github上面创建一个公开项目,当然你还有其它的可选择，如开源中国，CODING,Bitbucked以及CSDN Code
 
@@ -39,6 +51,7 @@ git push -u origin master 1.0.1 (push tag 到远端)
 ```sh
 ./upload.sh
 ```
+执行时候如果报错 【You need to register a session first.】 则说明没有注册账户
 
 5.如果在执行.sh时出现权限文件，可以用下面的修改一下即可打开  xattr -rd com.apple.quarantine xxx.sh
 ```sh
