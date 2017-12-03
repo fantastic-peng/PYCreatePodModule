@@ -2,4 +2,4 @@
 
 read -p "Please enter the ProjectName:" no;
 
-pod lib create $no --template-url=https://github.com/lichao1992/ZEDPod_Template.git
+pod lib create $no --template-url=https://github.com/fantastic-peng/PYPod_Template.git
