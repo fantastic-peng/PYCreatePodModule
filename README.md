@@ -20,7 +20,22 @@
 ./valideSpec.sh
 ```
 
-4.spec文件验证通过之后，执行文件目录下的upload.sh脚本，将podsepc push 到 master repo
+4.push代码到远程
+```code
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/fantastic-peng/pengyueDemo.git(将远端仓库添加到本地repo 其中origin指代远端仓库的名字)
+git push -u origin master（这里的origin就是上个命令中的origin，可以自己命名）
+```
+5.打tag
+```code
+git  tag  1.0.1
+git tag -m 'first release' ‘1.0.1’(打tag时添加注释)
+git push -u origin master 1.0.1 (push tag 到远端)
+```
+
+6.spec文件验证通过之后，执行文件目录下的upload.sh脚本，将podsepc push 到 master repo
 ```sh
 ./upload.sh
 ```
